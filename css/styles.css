@@ -27,7 +27,7 @@ body {
     line-height: 1.5;
 }
 
-/* ========== GLOBALES ========== */
+/* -------------------- GLOBALES -------------------- */
 
 .contenedor {
     max-width: 120rem;
@@ -59,13 +59,13 @@ img {
     height: auto;
 }
 
-/* ========== UTILIDADES ========== */
+/* -------------------- UTILIDADES -------------------- */
 
 .text-center {
     text-align: center;
 }
 
-/* ========== DEGRADADOS ========== */
+/* -------------------- DEGRADADOS -------------------- */
 
 .degradado-verde {
     color: transparent;
@@ -74,7 +74,7 @@ img {
     background-clip: text;
 }
 
-/* ========== HEADER ========== */
+/* -------------------- HEADER -------------------- */
 
 .header {
     background-color: var( --negro );
@@ -128,4 +128,80 @@ img {
 .precio-producto span {
     font-size: 6rem;
     font-weight: 900;
+}
+
+/* -------------------- ICONOS -------------------- */
+
+.iconos {
+    padding: var( --separacion ) 0;
+}
+
+@media (min-width: 768px) {
+    .iconos {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.icono {
+    text-align: center;
+    margin-bottom: calc( var( --separacion ) / 2);
+}
+
+.icono:last-of-type {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .icono {
+        margin: 0;
+    }
+}
+
+.icono img {
+    margin: 0 auto;
+    width: 5rem;
+}
+
+.icono h3 {
+    color: var( --primario );
+    text-transform: uppercase;
+    margin-top: calc( var( --separacion ) / 2 );
+}
+
+/* -------------------- SOBRE TECH -------------------- */
+
+.sobre-tech {
+    background-image: linear-gradient( to bottom, transparent 50%, var( --primario ) 50% 100% ), url(../img/imagen-mujer.jpg);
+    background-position: right;
+    background-repeat: repeat no-repeat;
+    background-size: 100%, 110rem;
+}
+
+.sobre-tech-grid {
+    display: grid;
+    grid-template-rows: repeat( 2, 40rem );
+    row-gap: var( --separacion );
+}
+
+.texto-sobre-tech {
+    grid-row: 2 / 3;
+    color: var( --blanco );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.texto-sobre-tech h2 {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.texto-sobre-tech span {
+    font-weight: 900;
+}
+
+.texto-sobre-tech p {
+    font-size: 2rem;
+    line-height: 2;
 }
